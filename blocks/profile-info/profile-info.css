@@ -7,4 +7,29 @@
   "title edit-btn"
   "description description";
   padding-left: 28px;
+  align-items: baseline;
 }
+
+/*@media screen and (max-width: 1279px) {
+  .profile-info {
+    grid-template-areas:
+  "title"
+  "edit-btn"
+  "description";
+  }
+};*/
+
+
+
+@media screen and (max-width: 1279px) {
+  .profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding-left: 0;
+    padding-bottom: 36px;
+
+  }
+};
+

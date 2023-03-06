@@ -5,3 +5,13 @@
   line-height: 22px;
   grid-area: description;
 }
+
+
+
+@media screen and (max-width: 1279px) {
+  .profile-info__description {
+    font-size: 14px;
+    line-height: 17px;
+  }
+};
+

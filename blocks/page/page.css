@@ -6,3 +6,10 @@
   padding-top: 45px;
   color: #fff;
 }
+
+@media screen and (max-width: 1279px) {
+  .page {
+    max-width: 720px;
+    padding: 28px 19px 0;
+  }
+}

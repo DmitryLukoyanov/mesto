@@ -9,7 +9,7 @@
   box-sizing: border-box;
   padding: 0;
   grid-area: edit-btn;
-  align-self: flex-end;
+
   transition: opacity 0.2s linear;
   cursor: pointer;
 }
@@ -17,3 +17,12 @@
 .profile-info__edit-btn:hover {
   opacity: 0.6;
 }
+
+
+@media screen and (max-width: 1279px) {
+  .profile-info__edit-btn {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+};

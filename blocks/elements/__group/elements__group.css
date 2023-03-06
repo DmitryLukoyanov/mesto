@@ -1,0 +1,8 @@
+.elements__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 246px;
+  padding: 25px 15px 31px 21px;
+  margin: 0 auto;
+}
