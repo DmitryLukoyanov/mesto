@@ -14,7 +14,7 @@
     grid-template-columns: 1fr;
     justify-items: center;
   }
-};
+}
 
 
 @media screen and (max-width: 1279px) {
@@ -23,6 +23,6 @@
     justify-items: center;
     gap: 20px;
   }
-};
+}
 
 
