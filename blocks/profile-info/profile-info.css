@@ -1,7 +1,7 @@
 .profile-info {
   display: grid;
   max-width: 336px;
-  gap: 16px 18px;
+  gap: 8px 18px;
   grid-template-columns: 294px 1fr;
   grid-template-areas:
   "title edit-btn"
@@ -9,17 +9,6 @@
   padding-left: 28px;
   align-items: baseline;
 }
-
-/*@media screen and (max-width: 1279px) {
-  .profile-info {
-    grid-template-areas:
-  "title"
-  "edit-btn"
-  "description";
-  }
-};*/
-
-
 
 @media screen and (max-width: 1279px) {
   .profile-info {

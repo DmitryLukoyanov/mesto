@@ -5,11 +5,11 @@
   background-color: black;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 22px 22px;
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   padding: 0;
   grid-area: edit-btn;
-
   transition: opacity 0.2s linear;
   cursor: pointer;
 }
