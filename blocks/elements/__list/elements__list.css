@@ -19,6 +19,5 @@
 @media screen and (max-width: 767px) {
   .elements__list {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 }
