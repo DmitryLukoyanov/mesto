@@ -20,59 +20,18 @@
           <button class="profile-info__edit-btn" type="button"></button>
           <p class="profile-info__description">Исследователь океана</p>
         </div>
-        <button class="profile__add-btn" type="button"></button>
+        <button class="profile__add-card-btn" type="button"></button>
       </section>
       <section class="elements" aria-label="Фото галерея">
         <ul class="elements__list">
-          <li class="elements__card">
-            <img class="elements__img" src="./images/karachaevsk.jpg" alt="Фото Карачаевска">
-            <div class="elements__group">
-              <p class="elements__title">Карачаевск</p>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__img" src="./images/elbrus.jpg" alt="Фото Эльбруса">
-            <div class="elements__group">
-              <p class="elements__title">Гора Эльбрус</p>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__img" src="./images/dombai.jpg" alt="Фото Домбая">
-            <div class="elements__group">
-              <p class="elements__title">Домбай</p>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__img" src="./images/elbrus.jpg" alt="Фото Эльбруса">
-            <div class="elements__group">
-              <p class="elements__title">Гора Эльбрус</p>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__img" src="./images/dombai.jpg" alt="Фото Домбая">
-            <div class="elements__group">
-              <p class="elements__title">Домбай</p>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__img" src="./images/karachaevsk.jpg" alt="Фото Домбая">
-            <div class="elements__group">
-              <p class="elements__title">Карачаево-Черкессия</p>
-              <button class="elements__like" type="button"></button>
-            </div>
-          </li>
         </ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">© 2023 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <!--попап редактирования профиля-->
+    <div class="popup editProfile-popup">
         <div class="popup__container">
           <button class="popup__close-btn" type="button"></button>
           <form class="edit-form" name="edit-form">
@@ -85,6 +44,43 @@
           </form>
         </div>
     </div>
+
+    <!--попап добавления карточки-->
+    <div class="popup addCard-popup">
+      <div class="popup__container">
+        <button class="popup__close-btn" type="button"></button>
+        <form class="edit-form" name="edit-form">
+          <h2 class="edit-form__title">Новое место</h2>
+          <fieldset class="edit-form__info">
+            <input class="edit-form__input edit-form__input_card_name" type="text" placeholder="Название" name="name">
+            <input class="edit-form__input edit-form__input_card_link" type="text" placeholder="Ссылка на картинку" name="link">
+          </fieldset>
+          <button class="edit-form__save-btn" type="submit">Создать</button>
+        </form>
+      </div>
+  </div>
+
+    <!--Попап открытия картинки-->
+    <div class="popup lightbox-popup">
+      <figure class="popup__image-container">
+        <img class="popup__image" src="#" alt="Всплывающая картинка">
+        <figcaption class="popup__image-caption"></figcaption>
+        <button class="popup__close-btn" type="button" aria-label="закрыть окно"></button>
+      </figure>
+    </div>
+
+    <!--Шаблон карточки-->
+    <template class="template__card">
+          <li class="elements__card">
+            <button class="elements__delete" type="button"></button>
+            <img class="elements__img" src="" alt="">
+            <div class="elements__group">
+              <p class="elements__title"></p>
+              <button class="elements__like" type="button">
+              </button>
+            </div>
+          </li>
+        </template>
   </div>
   <script src="./scripts/index.js"></script>
 </body>
