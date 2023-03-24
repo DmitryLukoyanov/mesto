@@ -7,7 +7,7 @@ const popupImageLink = popupImage.querySelector('.popup__image');
 const popupImageCaption = popupImage.querySelector('.popup__image-caption');
 
 //>>>>>>>>>>>>>> Добавить карточку нового места
-function uploadInitialCards(item/*, toBegin*/) {
+function uploadInitialCards(item) {
   const templateCardGallery = templateCard.cloneNode(true);
   const imageLinkTemplateCard = templateCardGallery.querySelector('.elements__img').src = item.link;
   const imageAltTemplateCard = templateCardGallery.querySelector('.elements__img').alt;
@@ -28,8 +28,6 @@ function uploadInitialCards(item/*, toBegin*/) {
 
   //>>>>>>>>> Попап с увеличенной картинкой
   const popupImageOpenButton = templateCardGallery.querySelector('.elements__img');
-  /*popupImageLink.setAttribute('alt', 'Картинка');*/
-
   popupImageOpenButton.addEventListener('click', function() {
     popupImageCaption.textContent = titleTemplateCard;
     popupImageLink.src = imageLinkTemplateCard;
