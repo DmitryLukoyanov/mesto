@@ -34,7 +34,6 @@ function uploadInitialCards(item/*, toBegin*/) {
     popupImageCaption.textContent = titleTemplateCard;
     popupImageLink.src = imageLinkTemplateCard;
     popupImageLink.alt = imageAltTemplateCard;
-    console.log(popupImageLink);
     openPopup(popupImage);
   })
 
