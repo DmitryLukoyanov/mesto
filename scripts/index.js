@@ -7,7 +7,7 @@ const popupImageLink = popupImage.querySelector('.popup__image');
 const popupImageCaption = popupImage.querySelector('.popup__image-caption');
 
 //>>>>>>>>>>>>>> Добавить карточку нового места
-function uploadInitialCards(item) {
+function createCard(item) {
   const templateCardGallery = templateCard.cloneNode(true);
   const imageLinkTemplateCard = templateCardGallery.querySelector('.elements__img').src = item.link;
   const imageAltTemplateCard = templateCardGallery.querySelector('.elements__img').alt;
@@ -43,7 +43,7 @@ popupImageCloseButton.addEventListener('click', function() {
   });
 
 initialCards.forEach(function(item) {
-  const cardList = uploadInitialCards(item);
+  const cardList = createCard(item);
   elementsList.append(cardList);
 });
 
@@ -70,21 +70,21 @@ buttonCloseEditProfile.addEventListener('click', function() {
   closePopup(popupEditProfile);
 });
 
-// Поля ФОРМЫ редактирования профиля
-const formElement = popupEditProfile.querySelector('.edit-form');
+// Поля формы редактирования профиля
+const formEditProfile = popupEditProfile.querySelector('.edit-form');
 const nameProfileInfo = document.querySelector('.profile-info__title');
 const descriptionProfileInfo = document.querySelector('.profile-info__description');
-const nameInput = formElement.querySelector('.edit-form__input_type_name');
-const descriptionInput = formElement.querySelector('.edit-form__input_type_description');
+const nameInput = formEditProfile.querySelector('.edit-form__input_type_name');
+const descriptionInput = formEditProfile.querySelector('.edit-form__input_type_description');
 
 // Записать значения из полей формы в заголовки страницы (при клике)
-function handleFormSubmit (e) {
+function submitEditProfileForm (e) {
   e.preventDefault();
   nameProfileInfo.textContent = nameInput.value;
   descriptionProfileInfo.textContent = descriptionInput.value;
   closePopup(popupEditProfile);
 }
-formElement.addEventListener('submit', handleFormSubmit);
+formEditProfile.addEventListener('submit', submitEditProfileForm);
 
 //  >>>>>>>>>>>>>>>> Поля формы добавления карточки места
 const popupNewCard = document.querySelector('.addCard-popup');
@@ -110,7 +110,7 @@ const cardLinkInput = formCard.querySelector('.edit-form__input_card_link');
 function addNewCardPlace(e) {
   e.preventDefault();
 
-  const newCard = uploadInitialCards({
+  const newCard = createCard({
     name: cardNameInput.value,
     link: cardLinkInput.value
   })
