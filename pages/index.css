@@ -34,6 +34,11 @@
 @import url(../blocks/edit-form/__info/edit-form__info.css);
 @import url(../blocks/edit-form/__input/edit-form__input.css);
 @import url(../blocks/edit-form/__save-btn/edit-form__save-btn.css);
+@import url(../blocks/edit-form/__save-btn/_invalid/edit-form__save-btn_invalid.css);
+@import url(../blocks/edit-form/__save-btn/_valid/edit-form__save-btn_valid.css);
+@import url(../blocks/edit-form/__error/edit-form__error.css);
+@import url(../blocks/edit-form/__error/_visible/edit-form__error_visible.css);
+@import url(../blocks/edit-form/__input/_error/edit-form__input_error.css);
 
 
 
