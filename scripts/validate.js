@@ -12,7 +12,7 @@ const enableValidationConfig = {
 const enableValidation = ({ formSelector, ...rest }) => {
   const forms = Array.from(document.querySelectorAll(formSelector));
   forms.forEach(form => {
-    // слушатель на отправку каждой формы
+    //>>>>>>>> слушатель на отправку каждой формы
     form.addEventListener('submit', (evt) => {
         evt.preventDefault();
         const formButton = form.querySelector(rest.submitButtonSelector);
@@ -58,9 +58,9 @@ const setEventListeners = (formToValidate, { inputSelector, submitButtonSelector
 const checkInputValidity = (formToValidate, input) => {
    if (!input.validity.valid) {
     showInputError(formToValidate, input, input.validationMessage);
-  } else {
-    hideInputError(formToValidate, input);
-  }
+    } else {
+      hideInputError(formToValidate, input);
+    };
 };
 
 const hasInvalidInput = (formInputs) => {
@@ -82,11 +82,9 @@ const disableButton = (button, { inactiveButtonClass, activeButtonClass }) => {
 enableValidation(enableValidationConfig);
 
 const cleaneErrorMessage = (formToValidate) => {
-  if(formToValidate) {
     formToValidate.querySelectorAll(enableValidationConfig.inputSelector).forEach((input) => {
       if (!input.validity.valid) {
         hideInputError(formToValidate, input)
       }
     })
-  }
-};
+  };
