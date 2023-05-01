@@ -7,4 +7,5 @@
   font-weight: 400;
   margin-top: 5px;
   min-height: 2.5em;
+  transition: visibility 0s, opacity 0.2s linear;
 }

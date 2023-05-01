@@ -34,7 +34,7 @@
     <div class="popup editProfile-popup">
         <div class="popup__container">
           <button class="popup__close-btn" type="button"></button>
-          <form class="edit-form" name="edit-form" novalidate>
+          <form class="edit-form edit-form_profile" name="edit-form" novalidate>
             <h2 class="edit-form__title">Редактировать профиль</h2>
             <fieldset class="edit-form__info">
               <input class="edit-form__input edit-form__input_type_name" type="text" placeholder="Имя" name="name" id="name-profile" required minlength="2" maxlength="40">
@@ -51,7 +51,7 @@
     <div class="popup addCard-popup">
       <div class="popup__container">
         <button class="popup__close-btn" type="button"></button>
-        <form class="edit-form" name="edit-form" novalidate>
+        <form class="edit-form edit-form_new" name="edit-form" novalidate>
           <h2 class="edit-form__title">Новое место</h2>
           <fieldset class="edit-form__info">
             <input class="edit-form__input edit-form__input_card_name" type="text" placeholder="Название" name="name" id="name-card" required minlength="2" maxlength="30">
@@ -85,10 +85,25 @@
             </div>
           </li>
         </template>
+
+    <template class="template__card2">
+          <li class="elements__card HELLO">
+            <button class="elements__delete" type="button"></button>
+            <img class="elements__img" src="#" alt="Картинка">
+            <div class="elements__group">
+              <p class="elements__title"></p>
+              <button class="elements__like" type="button">
+              </button>
+            </div>
+          </li>
+        </template>
   </div>
+  <!-- <script src="./scripts/utils.js"></script> -->
   <script src="./scripts/constants.js"></script>
-  <script src="./scripts/validate.js"></script>
-  <script src="./scripts/index.js"></script>
+  <!-- <script src="./scripts/Card.js"></script> -->
+  <!-- <script src="./scripts/validate.js"></script> -->
+  <!-- <script src="./scripts/FormValidator.js"></script> -->
+  <script type="module" src="./scripts/index.js"></script>
 
 </body>
 </html>
