@@ -1,13 +1,11 @@
+import initialCards from "./constants.js"
 import {
   openPopup,
   closePopup,
-  closePopupByEsc,
-  closePopupOverlay
  } from "./utils.js";
 import Card from "./card.js";
 import FormValidator from "./FormValidator.js";
 
-//>>>>>>>>> Объявление переменных в глобальной области видимости
 const formPlace = document.querySelector('.edit-form_new');
 const formEdit = document.querySelector('.edit-form_profile')
 const elementsList = document.querySelector('.elements__list');
@@ -45,7 +43,6 @@ initialCards.forEach(function(item) {
 
 //>>>>>>>>>>>  Попап редактирования профиля
 const popupEditProfile = document.querySelector('.editProfile-popup');
-const buttonCloseEditProfile = popupEditProfile.querySelector('.popup__close-btn');
 const buttonOpenEditProfile = document.querySelector('.profile-info__edit-btn');
 
 buttonOpenEditProfile.addEventListener('click', function() {
@@ -90,7 +87,6 @@ const cardLinkInput = formCard.querySelector('.edit-form__input_card_link');
 //>>>>>>> Функция добавдения новой карточки
 function addNewCardPlace(e) {
   e.preventDefault();
-
   const newCard = new Card({
     name: cardNameInput.value,
     link: cardLinkInput.value

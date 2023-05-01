@@ -37,10 +37,9 @@ class Card {
     const popupImageCaption = popupImage.querySelector('.popup__image-caption');
 
     popupImageCaption.textContent = this._title;
-      popupImageLink.src = this._image;
-      console.log(this);
-      popupImageLink.alt = this._title;
-      openPopup(popupImage);
+    popupImageLink.src = this._image;
+    popupImageLink.alt = this._title;
+    openPopup(popupImage);
   };
 
   _getTemplate() {
