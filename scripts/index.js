@@ -36,9 +36,22 @@ closeButtons.forEach((button) => {
 });
 
 //>>>>>> Добавдение карточек из начального массива
+function handleCardClick(name, link) {
+  this._popupImageCaption.textContent = name;
+  this._popupImageLink.src = link;
+  this._popupImageLink.alt = name;
+  openPopup(this._popupImage);
+};
+
+function createCard(item) {
+  // тут создаем карточку и возвращаем ее
+  const card = new Card(item, ".template__card", handleCardClick)
+  const cardElement = card.createCard();
+  return cardElement
+};
+
 initialCards.forEach(function(item) {
-    const card = new Card(item, ".template__card")._element;
-    elementsList.append(card);
+    elementsList.append(createCard(item));
 });
 
 //>>>>>>>>>>>  Попап редактирования профиля
@@ -87,11 +100,12 @@ const cardLinkInput = formCard.querySelector('.edit-form__input_card_link');
 //>>>>>>> Функция добавдения новой карточки
 function addNewCardPlace(e) {
   e.preventDefault();
-  const newCard = new Card({
+  const newCard = {
     name: cardNameInput.value,
     link: cardLinkInput.value
-  }, ".template__card");
-  elementsList.prepend(newCard._element);
+  }
+
+  elementsList.prepend(createCard(newCard));
   closePopup(popupNewCard);
   e.target.reset();
 };

@@ -8,7 +8,8 @@ class FormValidator {
     this._inputErrorClass = config.inputErrorClass;
     this._errorClass = config.errorClass;
     this._formButton = this._form.querySelector(this._submitButtonSelector);
-  }
+    this._formInputs = Array.from(this._form.querySelectorAll(this._inputSelector));
+  };
 
   enableValidation() {
     this._form.addEventListener('submit', (evt) => {
@@ -19,12 +20,11 @@ class FormValidator {
   };
 
   _setEventListeners() {
-    const formInputs = Array.from(this._form.querySelectorAll(this._inputSelector));
     this._disableButton();
-    formInputs.forEach(input => {
+    this._formInputs.forEach(input => {
       input.addEventListener('input', () => {
         this._checkInputValidity(input);
-        if (this._hasInvalidInput(formInputs)) {
+        if (this._hasInvalidInput()) {
           this._disableButton();
         } else {
           this._enableButton();
@@ -55,8 +55,8 @@ class FormValidator {
      };
   };
 
- _hasInvalidInput(formInputs) {
-   return formInputs.some(item => !item.validity.valid);
+ _hasInvalidInput() {
+   return this._formInputs.some(item => !item.validity.valid);
  };
 
  _enableButton() {
@@ -72,12 +72,12 @@ class FormValidator {
  };
 
  cleaneErrorMessage() {
-  this._form.querySelectorAll(this._inputSelector).forEach((input) => {
+  this._formInputs.forEach((input) => {
     if (!input.validity.valid) {
       this._hideInputError(input)
       }
     })
    }
-}
+};
 
 export default FormValidator;
